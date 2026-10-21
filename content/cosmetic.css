@@ -1,0 +1,54 @@
+/* OpenBlock - Yüksek Performanslı Kozmetik Reklam Filtresi */
+
+/* Genel Reklam ve Sponsor Kapsayıcıları */
+ins.adsbygoogle,
+[id^="google_ads_"],
+[id^="div-gpt-ad"],
+[class*="google-ad"],
+[class*="adsbygoogle"],
+[class*="ad-banner"],
+[class*="ad_banner"],
+[class*="banner-ad"],
+[class*="banner_ad"],
+[class*="advertisement"],
+[class*="sponsor-post"],
+[class*="sponsored-post"],
+[class*="ad-slot"],
+[class*="ad_slot"],
+[class*="ad-container"],
+[class*="ad_container"],
+[class*="ad-placement"],
+[class*="ad-wrapper"],
+[data-ad-client],
+[data-ad-slot],
+[data-google-query-id],
+.taboola-placeholder,
+.outbrain-placeholder,
+.mgid-block,
+.reklam-alani,
+.reklam_alani,
+.reklam-kutusu,
+.reklam_kutusu,
+#reklam,
+#reklamlar,
+.reklamlar {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Anti-Adblock Karartma ve Modal Kilit Kaldırıcı */
+body.openblock-anti-adblock-defused,
+html.openblock-anti-adblock-defused {
+  overflow: auto !important;
+  position: static !important;
+  filter: none !important;
+}

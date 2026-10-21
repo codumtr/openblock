@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "OpenBlock - Ultra Hızlı & Açık Kaynak AdBlocker",
+  "short_name": "OpenBlock",
+  "version": "1.0.0",
+  "description": "Manifest V3 tabanlı, sıfır bellek tüketimli, gizlilik odaklı ve açık kaynaklı yeni nesil reklam engelleyici.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "OpenBlock Kalkanı",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["content/cosmetic.css"],
+      "js": ["content/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "openblock_core_rules",
+        "enabled": true,
+        "path": "rules/rules.json"
+      }
+    ]
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  }
+}
